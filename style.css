@@ -1,0 +1,38 @@
+body {
+    height: 1500px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    font-size: x-large;
+    letter-spacing: 8px;
+    text-align: center;
+    height: 130px;
+    background-color: lightblue;
+}
+
+img {
+    width: 150px; 
+    height: 150px;
+    margin-top: 50px;
+    border-radius: 50%;
+    border: solid white 5px;
+}
+
+.judul h1 {
+    margin-top: 30px;
+    margin-bottom: 0%;
+    color: #3C3C3E;
+}
+
+.judul h3 {
+    margin-top: 0%;
+    color: #3C3C3E;
+    letter-spacing: 5px;
+}
+
+hr {
+    border-top: solid #3C3C3E 3px;
+    margin-top: 250px;
+}
+
