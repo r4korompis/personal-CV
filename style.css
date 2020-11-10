@@ -1,170 +1,116 @@
-/* css reset */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+/* font */
+@font-face {
+    font-family: 'volkhov';
+    src: url(font/Volkhov-Regular.ttf);
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+
+
+/* style */
 body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #202020;
 }
 
-/* micro clearfix */
- .cf:before,
- .cf:after {
-	 content: " "; /* 1 */
-	 display: table; /* 2 */
- }
- 
- .cf:after {
-	 clear: both;
- }
- 
- /**
-  * For IE 6/7 only
-  * Include this rule to trigger hasLayout and contain floats.
-  */
- .cf {
-	 *zoom: 1;
- }
-
- /* my style */
-
- body {
-	 background-color: #0E0E0E;
-	 font-family: Arial, Helvetica, sans-serif;
-	 font-size: 16px;
- }
-
- .container {
-	 width: 1550px;
-	 background-color: #ffffff;
-	 margin: auto;
- }
-
- header {
-	 background-image: url(foto/background-komputer.png);
-	 background-repeat: no-repeat;
-	 background-size: cover;
-	 background-position-y: -400px;
-	 height: 500px;
-	 font-weight: bold;
-	 font-family: 'Volkhov', serif;
-	 color: #4D4D4D;
-	 position: relative;
-	 border-bottom: 5px solid #4D4D4D;
-	 /* border-top: 10px solid #00ACEE; */
- }
-
- header h1 {
-	 font-size: 4rem;
-	 padding: 50px;
-	 text-indent: 40px;
- }
-
- header p {
-	 font-size: 2.5rem;
-	 padding-left: 50px;
-	 margin-top: -50px;
-	 text-indent: 60px;
- }
-
- img {
-	 width: 250px;
-	 position: absolute; 
-	 top: 50px;
-	 right: 160px;
- }
-
-.about .content h1 {
-	font-family: 'Volkhov', serif;
-	font-size: 2rem;
-	font-weight: bold;
-	margin: auto;
-	width: 200px;
-	padding-top: 50px;
-	border-bottom: 5px solid #00ACEE;
-	text-align: center;
-	color: #4D4D4D;
+.container {
+    max-width: 1200px;
+    background-color: white;
+    margin: auto;
 }
 
-.about .content .colmn {
-	width: 1000px;
-	border-top: 0.1px solid #DBD9D8;
-	margin: auto;
-	padding: 20px;
+header {
+    display: flex;
+    border-bottom: 2px solid #130F49;
 }
 
-.about .content .colmn p {
-	padding: 5px;
-	text-align: center;
-	font-size: 1rem;
-	font-weight: bold;
-	line-height: 1.5;
+header .foto-profile {
+    width: 250px;
+    height: 250px;
+    background-image: url(foto/foto-profile.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -30px;
+    border-radius: 125px;
+    border-top-left-radius: 0px;
+    margin: 20px;
+    box-sizing: border-box;
 }
 
-.about .content .colmn a {
-	text-decoration: none;
+header .nama {
+    font-family: 'volkhov';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #130F49;
+    margin: 20px;
+    box-sizing: border-box;
 }
 
-.about .content .colmn a:hover {
-	color: mediumvioletred;
+header .nama h1 span {
+    font-size: 60px;
+    color: #35A2CE;
 }
 
-.education-hobby-skills .content {
-	background-color: #D6DAE3;
+main h1 {
+    font-family: 'volkhov';
+    max-width: 150px;
+    margin: auto;
+    padding-top: 10px;
+    border-bottom: 3px solid #35A2CE;
+    text-align: center;
 }
 
-.education-hobby-skills .content h1 {
-	font-family: 'Volkhov', serif;
-	font-size: 2rem;
-	font-weight: bold;
-	margin: auto;
-	width: 200px;
-	padding-top: 50px;
-	border-bottom: 5px solid #00ACEE;
-	text-align: center;
-	color: #4D4D4D;
+main .about {
+    background-color: #D1E1F0;
 }
 
-.education-hobby-skills .content .colmn1,.colmn2,.colmn3 {
-	width: 500px;
-	height: 500px;
-	border: 2px solid black;
-	float: left;
-	margin: 6px;
+
+main .about .content {
+    max-width: 800px;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 10px;
+    border-top: 1px solid #929292;
+}
+
+main .about .content a {
+    color: royalblue;
+    text-decoration: none;
+}
+
+main .about .content a:hover {
+    color: purple;
+}
+
+main .education-hobby-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main .education-hobby-skills .colmn1, .colmn2, .colmn3 {
+    max-width: 400px;
+}
+
+main .education-hobby-skills .colmn1 h1 {
+    max-width: 180px;
+}
+
+main .contact {
+    background-color: #D1E1F0;
+}
+
+/* responsive */
+@media screen and (max-width: 885px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    header {
+        font-size: 10px;
+    }
 }
