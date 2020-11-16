@@ -1,116 +1,239 @@
-/* font */
-@font-face {
-    font-family: 'volkhov';
-    src: url(font/Volkhov-Regular.ttf);
+* {
+    margin: 0;
+    padding: 0;
 }
 
-
-/* style */
 body {
-    margin: 0;
+    background-color: #248be6;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #202020;
+    font-size: 16px;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 900px;  
     background-color: white;
-    margin: auto;
-}
-
-header {
-    display: flex;
-    border-bottom: 2px solid #130F49;
-}
-
-header .foto-profile {
-    width: 250px;
-    height: 250px;
-    background-image: url(foto/foto-profile.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: -30px;
-    border-radius: 125px;
-    border-top-left-radius: 0px;
-    margin: 20px;
+    margin: 20px auto;
+    padding: 50px;
     box-sizing: border-box;
+    display: grid;
 }
 
-header .nama {
-    font-family: 'volkhov';
+.container div {
+    border-radius: 20px;
+    background-color: #D0E2F0;
+}
+
+/* Header */
+.header {
+    display: grid;
+    grid-template-areas: 
+    'foto title title' ;
+    gap: 10px;
+}
+
+.foto-profile {
+    grid-area: foto;
+    width: 200px;
+    height: 200px;
+    background-image: url(foto/foto-profile.jpeg);
+    background-size: cover;
+    background-position-y: -25px;
+}
+
+.title {
+    grid-area: title;
+    padding: 10px 50px;
+}
+
+.nama {
+    color: #020202;
+    font-family: 'sinkin';
+}
+
+.pekerjaan {
+    color: #0068DD;
+}
+
+.about {
+    margin-top: 20px;
+    word-spacing: 4px;
+}
+
+.about a {
+    text-decoration: none;
+    color: #1477e9;
+}
+
+.about a:hover {
+    color: violet;
+}
+
+/* Section */
+.section {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.item h2 {
+    margin-top: 10px;
+    color: #0021dd;
+    text-align: center;
+}
+
+.education {
+    font-size: 0.9em;
+    margin: 10px;
+}
+
+.education ul {
+    list-style-type: none;
+    border-left: 3px solid #1477e9;
+}
+
+.education li {
+    margin: 10px;
+}
+
+.pro-skills {
+    margin: 10px 30px;
+}
+
+.pro-skills ul {
+    list-style-type: square;
+}
+
+.icons {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 80px);
+    place-content: center;
+    gap: 20px;
+}
+
+.icons .box {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    color: #130F49;
-    margin: 20px;
-    box-sizing: border-box;
+    justify-content: center;  
+    align-items: center;
+    background-color: white;
+    padding: 10px;
 }
 
-header .nama h1 span {
-    font-size: 60px;
-    color: #35A2CE;
-}
-
-main h1 {
-    font-family: 'volkhov';
-    max-width: 150px;
-    margin: auto;
-    padding-top: 10px;
-    border-bottom: 3px solid #35A2CE;
+.box p {
     text-align: center;
+    margin: 5px;
+    font-weight: 600;
+    color: rgb(71, 71, 71);
 }
 
-main .about {
-    background-color: #D1E1F0;
+.icons i {
+    font-size: 50px;
+    color: #6824e6;
 }
 
-
-main .about .content {
-    max-width: 800px;
-    text-align: center;
-    margin: auto;
-    padding-bottom: 10px;
-    border-top: 1px solid #929292;
+.link {
+    margin: 10px;
 }
 
-main .about .content a {
-    color: royalblue;
+.link ul {
+    list-style-type: none;
+    font-size: 13px;
+}
+
+.link li {
+    margin: 0 10px;
+}
+
+.link a {
     text-decoration: none;
 }
 
-main .about .content a:hover {
-    color: purple;
+.link i {
+    font-size: 25px;
 }
 
-main .education-hobby-skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+
+
+
+/* Responsive Breakpoint */
+/* Extra small devices (phone 735px and down) */
+@media screen and (max-width: 735px) {
+    .link ul {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 20px;
+    }
+
+    .link i {
+        font-size: 70px;
+    }
+
+    .link b {
+        display: none;
+    }
 }
 
-main .education-hobby-skills .colmn1, .colmn2, .colmn3 {
-    max-width: 400px;
-}
+/* Small devices (phone 735px and up) */
+@media screen and (min-width: 735px) {
+    .section .contact {
+        margin-top: 10px;
+        order: 1;
+        width: 308%;
+    }
 
-main .education-hobby-skills .colmn1 h1 {
-    max-width: 180px;
-}
+    .contact .link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-main .contact {
-    background-color: #D1E1F0;
-}
-
-/* responsive */
-@media screen and (max-width: 885px) {
-    header {
+    .link ul {
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        text-align: center;
+    }
+
+    .link a {
+        display: flex;
+        align-items: center;
+    }
+
+    .link b {
+        padding: 5px;
     }
 }
 
-@media screen and (max-width: 450px) {
-    header {
-        font-size: 10px;
+/* Medium devices (tablets 850px and down) */
+@media screen and (max-width: 850px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
+
+    .section {
+        text-align: center;
+    }
+
+    .education ul {
+        border: 0;
+    }
+
+    .pro-skills ul {
+        list-style-type: none;
+    }
+}
+
+
+
+
+/* Internal Font */
+@font-face {
+    font-family: 'sinkin';
+    src: url(font/SinkinSans-700Bold-webfont.woff);
 }
