@@ -208,6 +208,15 @@ nav ul a:hover {
     margin: 15px 0;
 }
 
+.aboutMe a {
+    text-decoration: none;
+    color: #50359b;
+}
+
+.aboutMe a:hover {
+    color: #362469;
+}
+
 .hobbyIcons {
     margin: 10px;
     list-style: none;
