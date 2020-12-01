@@ -1,239 +1,314 @@
+/* Universal Selectors */
 * {
     margin: 0;
     padding: 0;
 }
 
+.judul {
+    font-family: 'OpenSans-ExtraBold';
+    margin: auto;
+    text-align: center;
+    color: #5629cf;
+    border-bottom: 2px solid rgba(0, 0, 255, 0.5);
+    width: 200px;
+}
+
+.subJudul {
+    font-family: 'OpenSans-ExtraBold';
+    text-align: center;
+    color: #50359b;
+}
+
+.sub2Judul {
+    font-family: 'OpenSans-ExtraBold';
+    text-align: left;
+    color: #362469;
+}
+
 body {
-    background-color: #248be6;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .container {
-    max-width: 900px;  
-    background-color: white;
-    margin: 20px auto;
-    padding: 50px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.about, .ability, .education {
+    font-family: 'OpenSans-Regular';
+    padding: 25px 10px;
     box-sizing: border-box;
+}
+
+/* header */
+.profile {
+    font-family: 'OpenSans-Regular', Arial, Helvetica, sans-serif;
     display: grid;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+    padding: 50px 0;
+    box-sizing: border-box;
 }
 
-.container div {
-    border-radius: 20px;
-    background-color: #D0E2F0;
-}
-
-/* Header */
-.header {
-    display: grid;
-    grid-template-areas: 
-    'foto title title' ;
-    gap: 10px;
-}
-
-.foto-profile {
-    grid-area: foto;
+.profile img {
     width: 200px;
-    height: 200px;
-    background-image: url(foto/foto-profile.jpeg);
-    background-size: cover;
-    background-position-y: -25px;
-}
-
-.title {
-    grid-area: title;
-    padding: 10px 50px;
+    margin: auto;
 }
 
 .nama {
-    color: #020202;
-    font-family: 'sinkin';
-}
-
-.pekerjaan {
-    color: #0068DD;
-}
-
-.about {
-    margin-top: 20px;
-    word-spacing: 4px;
-}
-
-.about a {
-    text-decoration: none;
-    color: #1477e9;
-}
-
-.about a:hover {
-    color: violet;
-}
-
-/* Section */
-.section {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-}
-
-.item h2 {
     margin-top: 10px;
-    color: #0021dd;
-    text-align: center;
+    box-sizing: border-box;
+    color: #5629cf;
 }
 
-.education {
-    font-size: 0.9em;
-    margin: 10px;
+.occupation {
+    color: #50359b;
 }
 
-.education ul {
-    list-style-type: none;
-    border-left: 3px solid #1477e9;
+.nama, .occupation {
+    font-weight: bold;
 }
 
-.education li {
-    margin: 10px;
-}
-
-.pro-skills {
-    margin: 10px 30px;
-}
-
-.pro-skills ul {
-    list-style-type: square;
-}
-
-.icons {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: grid;
-    grid-template-columns: repeat(2, 80px);
-    place-content: center;
-    gap: 20px;
-}
-
-.icons .box {
+.medsos {
     display: flex;
-    flex-direction: column;
-    justify-content: center;  
-    align-items: center;
-    background-color: white;
-    padding: 10px;
+    justify-content: center;
+    list-style: none;
+    padding-bottom: 170px;
 }
 
-.box p {
-    text-align: center;
-    margin: 5px;
-    font-weight: 600;
-    color: rgb(71, 71, 71);
+.medsos li {
+    margin: 0 15px;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #5629cf;
+    border-radius: 30px;
+}
+
+.medsos a {
+    display: grid;
+    place-content: center;
+    text-decoration: none;
+}
+
+.medsos li:hover {
+    background-color: #362469;
 }
 
 .icons i {
-    font-size: 50px;
-    color: #6824e6;
-}
-
-.link {
-    margin: 10px;
-}
-
-.link ul {
-    list-style-type: none;
-    font-size: 13px;
-}
-
-.link li {
-    margin: 0 10px;
-}
-
-.link a {
-    text-decoration: none;
-}
-
-.link i {
     font-size: 25px;
+    color: white;
+}
+
+/* about */
+.aboutMe {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.hobbyIcons {
+    margin: 10px;
+    list-style: none;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(2, 70px);
+    gap: 10px;
+}
+
+.hobbyIcons i {
+    font-size: 70px;
+    color: #362469;
+}
+
+.info {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 100px 200px;
+    place-content: center;
+    text-align: center;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.info i {
+    color: #362469;
+}
+
+/* ability */
+.ability .content {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.programmingLang ul, .frontend ul {
+    list-style: none;
+    display: grid;
+    justify-content: space-evenly;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* education */
+.school {
+    list-style: none;
+    display: grid;
+    place-content: center;
+    gap: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.school .sub2Judul {
+    border: 2px solid #5629cf;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* contact me */
+.form, .aside {
+    padding: 10px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px 5px;
+    margin: 5px auto;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #e2e2e2;
+    border: none;
+}
+
+.massage {
+    width: 100%;
+    padding: 0 5px;
+    margin: 5px auto;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #e2e2e2;
+    border: none;
+}
+
+.input:focus, .massage:focus {
+    border: 3px solid #5629cf;
+}
+
+.sub {
+    display: grid;
+    justify-content: center;
+}
+
+.submit {
+    width: 200px;
+    padding: 10px 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #6532f0;
+    color: white;
+}
+
+.submit:hover {
+    background-color: #362469;
+}
+
+.aside .subJudul {
+    text-align: left;
+    margin: 5px;
+}
+
+.aside .sub2Judul {
+    font-size: 16px;
+    text-indent: 20px;
+}
+
+/* footer */
+.footer {
+    width: 100%;
+    margin-top: 50px;
+    padding: 40px 0;
+    background-color: #140d27;
+    box-sizing: border-box;
+}
+
+.footer .judul {
+    border: none;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.footer .sub2Judul {
+    color: white;
+    text-align: center;
+}
+
+.footer .medsos {
+    padding: 0;
+    margin-top: 15px;
+}
+
+.footer .sub3Judul {
+    font-family: 'OpenSans-ExtraBold';
+    text-align: center;
+    color: #362469;
+    font-size: 14px;
+    padding-top: 50px;
 }
 
 
 
 
 /* Responsive Breakpoint */
-/* Extra small devices (phone 735px and down) */
-@media screen and (max-width: 735px) {
-    .link ul {
+/* Extra small devices (portrait phoene less 576px) */
+@media screen and (max-width: 576px) {
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 576px) { 
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) { 
+    .content {
         display: grid;
-        grid-template-columns: auto auto;
-        padding: 20px;
+        grid-template-columns: 50% 50%;
+        gap: 10px;
     }
 
-    .link i {
-        font-size: 70px;
+    .hobby, .information {
+        border: 3px solid #5629cf;
+        border-radius: 10px;
     }
 
-    .link b {
-        display: none;
-    }
-}
-
-/* Small devices (phone 735px and up) */
-@media screen and (min-width: 735px) {
-    .section .contact {
-        margin-top: 10px;
-        order: 1;
-        width: 308%;
-    }
-
-    .contact .link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .link ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .link a {
-        display: flex;
-        align-items: center;
-    }
-
-    .link b {
-        padding: 5px;
+    .programmingLang, .frontend {
+        border: 3px solid #5629cf;
+        border-radius: 10px;
     }
 }
 
-/* Medium devices (tablets 850px and down) */
-@media screen and (max-width: 850px) {
-    .header {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) { 
 
-    .section {
-        text-align: center;
-    }
-
-    .education ul {
-        border: 0;
-    }
-
-    .pro-skills ul {
-        list-style-type: none;
-    }
 }
 
+/* Extra large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) { 
 
+}
 
 
 /* Internal Font */
 @font-face {
-    font-family: 'sinkin';
-    src: url(font/SinkinSans-700Bold-webfont.woff);
+    font-family: 'OpenSans-ExtraBold';
+    src: url(font/OpenSans-ExtraBold.ttf);
+}
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url(font/OpenSans-Regular.ttf);
 }
