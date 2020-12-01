@@ -28,6 +28,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
+    overflow-x: hidden;
 }
 
 .container {
@@ -37,11 +38,111 @@ body {
 
 .about, .ability, .education {
     font-family: 'OpenSans-Regular';
-    padding: 25px 10px;
+    margin: 0 10px;
     box-sizing: border-box;
 }
 
+#about, #ability, #education, #contact {
+    height: 50px;
+}
+
+/* Navigasi */
+nav {
+    display: flex;
+    justify-content: space-around;  
+    padding: 15px 0;
+    background-color: #5629cf;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 40%;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #d8ccf8;
+    font-size: 16px;
+}
+
+nav ul a:hover {
+    color: #f6f4ff;
+}
+
+.logo {
+    font-family: 'LeagueGothic-Italic', Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #e4dff5;
+}
+
+/* hamburger menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -6px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #e4dff5;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* hamburger menu animation */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+
 /* header */
+.header {
+    padding-top: 40px;
+    box-sizing: border-box;
+}
+
 .profile {
     font-family: 'OpenSans-Regular', Arial, Helvetica, sans-serif;
     display: grid;
@@ -75,7 +176,7 @@ body {
     display: flex;
     justify-content: center;
     list-style: none;
-    padding-bottom: 170px;
+    padding-bottom: 120px;
 }
 
 .medsos li {
@@ -265,7 +366,27 @@ body {
 /* Responsive Breakpoint */
 /* Extra small devices (portrait phoene less 576px) */
 @media screen and (max-width: 576px) {
+    .menu-toggle {
+        display: flex;
+    }
 
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 80%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: #5629cf;
+        transform: translateX(0);
+        transition: all 1s;
+    }
+
+    nav ul.slide {
+        transform: translateX(100%);
+    }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -273,7 +394,14 @@ body {
 
 }
 
-/* Medium devices (tablets, 768px and up) */
+/* (protrait tablets, 768px maximum) */
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
 @media screen and (min-width: 768px) { 
     .content {
         display: grid;
@@ -299,7 +427,7 @@ body {
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media screen and (min-width: 1200px) { 
-
+    
 }
 
 
@@ -311,4 +439,8 @@ body {
 @font-face {
     font-family: 'OpenSans-Regular';
     src: url(font/OpenSans-Regular.ttf);
+}
+@font-face {
+    font-family: 'LeagueGothic-italic';
+    src: url(font/LeagueGothic-Italic.otf);
 }
