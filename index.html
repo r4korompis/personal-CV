@@ -12,8 +12,33 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+    
+    <!-- Navigasi -->
+    <nav>
+        <div class="logo">
+            <h4>R4korompis</h4>
+        </div>
+
+        <ul class="slide">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#ability">Ability</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- hamburger menu -->
+        <div class="menu-toggle">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
     <!-- Container -->
-    <div class="container">
+    <div class="container" id="home">
+        <!-- header -->
         <header class="header">
             <div class="profile">
                 <img src="foto/foto-profile-circle.png" alt="foto profile">
@@ -28,6 +53,7 @@
         </header>
 
         <!-- about -->
+        <div id="about"></div>
         <div class="about">
             <h1 class="judul">About Me</h1>
             <p class="aboutMe">Hi, saya adalah Mahasiswa di Universitas Klabat, saya mengambil fakultas Ilmu Komputer jurusan Sistem Informasi. saya mulai tertarik di dunia IT sejak saya masuk Universitas, cita-cita saya ingin menjadi Web Developer profesional.</p>
@@ -63,6 +89,7 @@
         </div>
 
         <!-- ability -->
+        <div id="ability"></div>
         <div class="ability">
             <h1 class="judul">Ability</h1>
             <div class="content">
@@ -85,6 +112,7 @@
         </div>
 
         <!-- education -->
+        <div id="education"></div>
         <div class="education">
             <h1 class="judul">Education</h1>
             <ul class="school">
@@ -96,6 +124,7 @@
         </div>
 
         <!-- contact -->
+        <div id="contact"></div>
         <div class="contact">
             <h1 class="judul">Contact Me</h1>
             <div class="content">
@@ -134,5 +163,8 @@
         </ul>
         <p class="sub3Judul">Copyright - 2020</p>
     </footer>
+
+    <!-- javascript -->
+    <script src="script.js"></script>
 </body>
 </html>
