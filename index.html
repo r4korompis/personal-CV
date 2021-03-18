@@ -1,170 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rangga Aldo Korompis | Personal CV</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Website | Rangga Aldo Korompis</title>
 
-    <!-- style -->
-    <link rel="stylesheet" href="style.css">
+    <!-- link css -->
+    <link rel="stylesheet" href="style.css" />
 
-    <!-- icons online -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
-    
-    <!-- Navigasi -->
-    <nav>
-        <div class="logo">
-            <h4>R4korompis</h4>
-        </div>
+    <!-- link icons -->
+    <script
+      src="https://kit.fontawesome.com/b2453a8c88.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- navigation -->
+    <nav class="nav">
+      <div class="logo">
+        <a href="#home"><h1 class="html-style">r4korompis</h1></a>
+      </div>
 
-        <ul class="slide">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#ability">Ability</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+      <ul class="slide">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
 
-        <!-- hamburger menu -->
-        <div class="menu-toggle">
-            <input type="checkbox">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+      <div class="humburger-menu">
+        <input type="checkbox" name="" id="" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
 
-    <!-- Container -->
-    <div class="container" id="home">
-        <!-- header -->
-        <header class="header">
-            <div class="profile">
-                <img src="foto/foto-profile-circle.png" alt="foto profile">
-                <h1 class="nama">Rangga Aldo Korompis</h1>
-                <p class="occupation">Student</p>
-            </div>
-            <ul class="medsos">
-                <li class="icons"><a href="https://web.facebook.com/r4korompis/" target="blank"><i class='bx bxl-facebook'></i></a></li>
-                <li class="icons"><a href="https://www.instagram.com/ranggakorompis/" target="blank"><i class='bx bxl-instagram-alt' ></i></a></li>
-                <li class="icons"><a href="https://github.com/r4korompis" target="blank"><i class='bx bxl-github'></i></a></li>
-            </ul>
-        </header>
-
-        <!-- about -->
-        <div id="about"></div>
-        <div class="about">
-            <h1 class="judul">About Me</h1>
-            <p class="aboutMe">Hi, saya adalah Mahasiswa di <a href="http://www.unklab.ac.id/" target="blank">Universitas Klabat</a>, saya mengambil fakultas Ilmu Komputer jurusan Sistem Informasi. saya mulai tertarik di dunia IT sejak saya masuk Universitas, cita-cita saya ingin menjadi Web Developer profesional.</p>
-
-            <div class="content">
-                <div class="hobby">
-                    <h3 class="subJudul">Hobby</h3>
-                        <ul class="hobbyIcons">
-                            <li><i class='bx bxs-movie-play'></i></li>
-                            <li><i class='bx bx-football' ></i></li>
-                            <li><i class='bx bxs-joystick'></i></li>
-                            <li><i class='bx bx-cycling'></i></li>  
-                        </ul>
-                </div>
-
-                <div class="information">
-                    <h3 class="subJudul">Information</h3>
-                    <ul class="info">
-                        <li><i class='bx bx-user'></i></li>
-                        <h4 class="sub2Judul">Rangga Korompis</h4>
-                    </ul>
-                    <ul class="info">
-                        <li><i class='bx bxl-whatsapp'></i></li>
-                        <h4 class="sub2Judul">0853-4191-0550</h4>
-                    </ul>
-                    <ul class="info">
-                        <li><i class='bx bx-envelope-open'></i></li>
-                        <h4 class="sub2Judul">r4korompis@gmail.com</h4>
-                    </ul>
-                </div>
-            </div>
-
+    <!-- container -->
+    <div class="container">
+      <!-- header -->
+      <header class="header" id="home">
+        <div class="foto-profile">
+          <img src="img/foto-profile-circle.png" alt="" />
         </div>
+        <div class="box">
+          <h1 class="title">Rangga Aldo Korompis</h1>
+          <h1 class="sub-title">Student</h1>
+          <ul class="link">
+            <li>
+              <a href="https://web.facebook.com/r4korompis" target="blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/ranggakorompis/" target="blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/r4korompis" target="blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </header>
 
-        <!-- ability -->
-        <div id="ability"></div>
-        <div class="ability">
-            <h1 class="judul">Ability</h1>
-            <div class="content">
-                <div class="programmingLang">
-                    <h3 class="subJudul">Programming Language</h3>
-                    <ul>
-                        <li class="sub2Judul"> <span><i class='bx bxl-c-plus-plus'></i></span> C/C++</li>
-                    </ul>
-                </div>
-
-                <div class="frontend">
-                    <h3 class="subJudul">Frontend</h3>
-                    <ul>
-                        <li class="sub2Judul"> <span><i class='bx bxl-html5'></i></span> HTML</li>
-                        <li class="sub2Judul"><span><i class='bx bxl-css3' ></i></span> CSS</li>
-                        <li class="sub2Judul"> <span><i class='bx bxl-javascript' ></i></span> JAVASCRIPT</li>
-                    </ul>
-                </div>
+      <!-- about -->
+      <div class="about" id="about">
+        <h1 class="sub-title html-style title-head">about</h1>
+        <div class="about-box">
+          <p class="paragraph">
+            Saya adalah Mahasiswa di
+            <a href="http://www.unklab.ac.id/" target="blank"
+              >Universitas Klabat</a
+            >
+            jurusan Ilmu Komputer prodi Sistem Infromasi. saya mulai tertarik di
+            dunia IT sejak masuk universitas. cita-cita saya adalah menjadi
+            Website Developer Profesional.
+          </p>
+          <div class="about-box-wrap">
+            <div class="education">
+              <h1 class="sub-title html-style">education</h1>
+              <ul>
+                <li>
+                  <p class="paragraph">
+                    <i class="fas fa-graduation-cap"></i> 2007 - 2013
+                  </p>
+                  <h1 class="sub-sub-title">SD Inpres Kolongan</h1>
+                </li>
+                <li>
+                  <p class="paragraph">
+                    <i class="fas fa-graduation-cap"></i> 2013 - 2016
+                  </p>
+                  <h1 class="sub-sub-title">SMP Negeri 2 Bitung</h1>
+                </li>
+                <li>
+                  <p class="paragraph">
+                    <i class="fas fa-graduation-cap"></i> 2016 - 2019
+                  </p>
+                  <h1 class="sub-sub-title">SMA Negeri 2 Bitung</h1>
+                </li>
+                <li>
+                  <i>Now -</i>
+                  <h1 class="sub-sub-title">
+                    <a href="http://www.unklab.ac.id/" target="blank"
+                      >Universitas Klabat</a
+                    >
+                  </h1>
+                </li>
+              </ul>
             </div>
-        </div>
-
-        <!-- education -->
-        <div id="education"></div>
-        <div class="education">
-            <h1 class="judul">Education</h1>
-            <ul class="school">
-                <li class="sub2Judul"> <i class='bx bxs-graduation' ></i> 2007 - 2013 <br> SD Inpres Kolongan</li>
-                <li class="sub2Judul"> <i class='bx bxs-graduation' ></i> 2013 - 2016 <br> SMP Negeri 2 Bitung </li>
-                <li class="sub2Judul"> <i class='bx bxs-graduation' ></i> 2016 - 2019 <br> SMA Negeri 2 Bitung </li>
-                <li class="sub2Judul"> Now - <br> Universitas Klabat</li>
-            </ul>
-        </div>
-
-        <!-- contact -->
-        <div id="contact"></div>
-        <div class="contact">
-            <h1 class="judul">Contact Me</h1>
-            <div class="content">
-                <form class="form">
-                    <input type="text" class="input" id="fname" name="firtsname" placeholder="Your name..."> <br>
-                    <input type="email" class="input" id="email" name="email" placeholder="Your email..."> <br>
-                    <input type="text" class="input" id="project" name="project" placeholder="Your Idea..."> <br>
-                    <textarea name="massage" class="massage" cols="30" rows="10" placeholder="Massage..."></textarea>
-                    <div class="sub">
-                        <input type="submit" class="submit" value="Submit your ideas here">
-                    </div>
-                </form>
-
-                <div class="aside">
-                    <h3 class="subJudul">Call Me</h3>
-                    <h4 class="sub2Judul">0853-4191-0550</h4>
-                    <h4 class="sub2Judul">0851-5752-7785</h4>
-                    <h3 class="subJudul">E-mail</h3>
-                    <h4 class="sub2Judul">r4korompis@gmail.com</h4>
-                    <h4 class="sub2Judul">korompisrangga14@gmail.com</h4>
-                    <h3 class="subJudul">Location</h3>
-                    <h4 class="sub2Judul">Kolongan, kec. Kombi - Tondano</h4>
-                </div>
+            <div class="h-a">
+              <div class="hobby">
+                <h1 class="sub-title html-style">hobby</h1>
+                <ul>
+                  <li>
+                    <i class="fas fa-film" title="Nonton film"></i>
+                  </li>
+                  <li>
+                    <i class="fas fa-biking" title="Adventure"></i>
+                  </li>
+                  <li>
+                    <i class="fas fa-code" title="Coding"></i>
+                  </li>
+                </ul>
+              </div>
+              <div class="ability">
+                <h1 class="sub-title html-style">ability</h1>
+                <ul>
+                  <li>
+                    <i class="fab fa-html5" title="html"></i>
+                  </li>
+                  <li>
+                    <i class="fab fa-css3-alt" title="css"></i>
+                  </li>
+                  <li>
+                    <i class="fab fa-js-square" title="javascript"></i>
+                  </li>
+                </ul>
+              </div>
             </div>
+          </div>
         </div>
+        <h1 class="sub-title html-style">/about</h1>
+      </div>
 
+      <!-- contact -->
+      <div class="contact" id="contact">
+        <h1 class="sub-title html-style title-head">contact</h1>
+        <div class="contact-box">
+          <form action="" class="contact-form">
+            <label for="name" class="sub-sub-title">Name</label>
+            <input type="text" id="name" name="name" class="input" />
+
+            <label for="email" class="sub-sub-title">Email</label>
+            <input type="email" id="email" name="email" class="input" />
+
+            <label for="massage" class="sub-sub-title">Massage</label>
+            <textarea
+              name="massage"
+              id="massage"
+              cols="30"
+              rows="4"
+              class="textarea"
+            ></textarea>
+
+            <input type="submit" value="SUBMIT" />
+          </form>
+          <div class="contact-info">
+            <div class="phone-num">
+              <h1 class="sub-title html-style">Call Me</h1>
+              <ul>
+                <li class="sub-sub-title">0853-4191-0550</li>
+                <li class="sub-sub-title">0851-5752-7785</li>
+              </ul>
+            </div>
+            <div class="mail">
+              <h1 class="sub-title html-style">Email</h1>
+              <ul>
+                <li class="sub-sub-title">
+                  <a href="mailto:r4korompis@gmail.com">r4korompis@gmail.com</a>
+                </li>
+                <li class="sub-sub-title">
+                  <a href="mailto:korompisaldo17@gmail.com"
+                    >korompisaldo17@gmail.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="location">
+              <h1 class="sub-title html-style">Location</h1>
+              <ul>
+                <li class="sub-sub-title">
+                  Kolongan, kec. Kombi - Tondano, Sulawesi Utara
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <h1 class="sub-title html-style">/contact</h1>
+      </div>
     </div>
 
     <footer class="footer">
-        <h1 class="judul">R4korompis</h1>
-        <p class="sub2Judul">ini adalah website pribadi saya, hubungi saya di link di bawah.</p>
-        <ul class="medsos">
-            <li class="icons"><a href="https://web.facebook.com/r4korompis/" target="blank"><i class='bx bxl-facebook'></i></a></li>
-            <li class="icons"><a href="https://www.instagram.com/ranggakorompis/" target="blank"><i class='bx bxl-instagram-alt' ></i></a></li>
-            <li class="icons"><a href="https://github.com/r4korompis" target="blank"><i class='bx bxl-github'></i></a></li>
-        </ul>
-        <p class="sub3Judul">Copyright - 2020</p>
+      <h1 class="sub-title">~let's get closer~</h1>
+      <ul class="link">
+        <li>
+          <a href="https://web.facebook.com/r4korompis" target="blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/ranggakorompis/" target="blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://github.com/r4korompis" target="blank"
+            ><i class="fab fa-github"></i
+          ></a>
+        </li>
+      </ul>
+      <p class="paragraph"><i class="fas fa-copyright"></i> - 2021</p>
     </footer>
-
     <!-- javascript -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
