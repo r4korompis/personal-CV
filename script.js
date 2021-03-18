@@ -1,6 +1,6 @@
-const menuToggle = document.querySelector('.menu-toggle input');
-const nav = document.querySelector('nav ul');
+const humburgerMenu = document.querySelector(".humburger-menu input");
+const slide = document.querySelector(".slide");
 
-menuToggle.addEventListener('click', function(){
-    nav.classList.toggle('slide');
+humburgerMenu.addEventListener("click", function () {
+  slide.classList.toggle("slide-open");
 });
