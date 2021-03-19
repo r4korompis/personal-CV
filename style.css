@@ -123,14 +123,14 @@
 }
 
 .foto-profile {
-  background-color: red;
-  width: 210px;
-  height: 210px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 105px;
+  width: 200px;
+  height: 200px;
+  background-image: url(img/foto-profile-circle.png);
+  background-size: cover;
+  background-position: center;
   background-color: var(--basic-color);
+  border: 5px solid var(--basic-color);
+  border-radius: 50%;
 }
 
 .foto-profile img {
