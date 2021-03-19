@@ -292,10 +292,11 @@ input[type="submit"] {
   border-radius: 10px;
   background-color: var(--basic-color-brighten);
   color: white;
+  outline: none;
 }
 
 input[type="submit"]:hover {
-  font-size: 1rem;
+  opacity: 0.8;
   cursor: pointer;
 }
 
