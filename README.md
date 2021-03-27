@@ -1,2 +1,3 @@
 # Personal-CV
-ini adalah repository untuk menampilkan CV pribadi saya
+my personal website repository. klik link on bellow
+⬇️⬇️
