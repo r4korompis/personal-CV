@@ -1,2 +1,2 @@
-# Personal-CV
-my personal website repository 🔥🔥
+# personal website
+"tak di kenal maka tak di sayang"
