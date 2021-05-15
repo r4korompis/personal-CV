@@ -1,2 +1,2 @@
-# repo for personal website
-"tak di kenal maka tak di sayang"
+# my personal website
+"tak kenal maka tak sayang"
