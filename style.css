@@ -271,6 +271,23 @@ html {
   min-height: 100vh;
 }
 
+.none {
+  display: none;
+}
+
+.myalert {
+  padding: 10px;
+  background-color: var(--basic-color-brighten);
+  color: white;
+  width: 50%;
+}
+
+.closeIcon {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 .contact-form {
   display: -ms-grid;
   display: grid;
@@ -292,7 +309,7 @@ textarea {
   outline: none;
 }
 
-input[type="submit"] {
+#submit {
   font-weight: 800;
   text-align: center;
   width: 100px;
@@ -303,7 +320,7 @@ input[type="submit"] {
   outline: none;
 }
 
-input[type="submit"]:hover {
+#submit {
   opacity: 0.8;
   cursor: pointer;
 }

@@ -152,24 +152,28 @@
       <!-- contact -->
       <div class="contact" id="contact">
         <h1 class="sub-title html-style title-head">contact</h1>
+        <div class="myalert none">
+          <span>terima kasih!</span> pesan anda telah kami terima.
+          <i class="fas fa-times closeIcon"></i>
+        </div>
         <div class="contact-box">
-          <form action="" class="contact-form">
+          <form action="" class="contact-form" name="submit-to-google-sheet">
             <label for="name" class="sub-sub-title">Name</label>
-            <input type="text" id="name" name="name" class="input" />
+            <input type="text" id="name" name="nama" class="input" required/>
 
             <label for="email" class="sub-sub-title">Email</label>
-            <input type="email" id="email" name="email" class="input" />
+            <input type="email" id="email" name="email" class="input" required/>
 
             <label for="massage" class="sub-sub-title">Massage</label>
             <textarea
-              name="massage"
+              name="pesan"
               id="massage"
               cols="30"
               rows="4"
               class="textarea"
+              required
             ></textarea>
-
-            <input type="submit" value="SUBMIT" />
+            <button type="submit" id="submit">SUBMIT</button>
           </form>
           <div class="contact-info">
             <div class="phone-num">
@@ -227,7 +231,24 @@
       </ul>
       <p class="paragraph"><i class="fas fa-copyright"></i> - 2021</p>
     </footer>
+
     <!-- javascript -->
     <script src="script.js"></script>
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzN_x1yeUq-k3ZPSkPQFgSbN-DdLCZshZzdI85rslwlh4ON7FNb1WLOhOtOC7HvHTgSzw/exec'
+      const form = document.forms['submit-to-google-sheet']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            myAlert.classList.toggle("none")
+            form.reset();
+            console.log('Success!', response)
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
   </body>
 </html>
