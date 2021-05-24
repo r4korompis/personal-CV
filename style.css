@@ -85,6 +85,7 @@ html {
   background-color: var(--basic-color);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px 20px;
   position: fixed;
   top: 0;
@@ -116,6 +117,11 @@ html {
 .slide li a:hover {
   color: var(--basic-color);
   background-color: white;
+}
+
+.humburger-menu .fas {
+  color: white;
+  font-size: 1.5rem;
 }
 
 /* header */
@@ -395,10 +401,10 @@ textarea:focus {
     background-color: var(--basic-color);
     list-style: none;
     transform: translateX(100%);
-    transition: 1s;
+    transition: 0.5s;
   }
 
-  .slide-open {
+  .toggle {
     transform: translateX(0%);
   }
 
@@ -407,41 +413,7 @@ textarea:focus {
   }
 
   .humburger-menu {
-    width: 35px;
-    height: 35px;
-    /* border: 1px solid white; */
-    position: relative;
-  }
-
-  .humburger-menu input {
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
-    z-index: 3;
-    opacity: 0;
-  }
-
-  .humburger-menu span {
-    margin-bottom: 6px;
-    display: block;
-    height: 7px;
-    background-color: white;
-    transition: 1s;
-  }
-
-  /* humburger menu animation */
-  .humburger-menu input:checked ~ span:nth-child(2) {
-    transform: rotate(45deg) translate(9.5px, 9.5px) scale(1.2, 1);
-  }
-
-  .humburger-menu input:checked ~ span:nth-child(3) {
-    transform: rotate(360deg);
-    opacity: 0;
-  }
-
-  .humburger-menu input:checked ~ span:nth-child(4) {
-    transform: rotate(-45deg) translate(9px, -9px) scale(1.2, 1);
+    z-index: 1;
   }
 }
 

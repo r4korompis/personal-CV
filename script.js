@@ -1,28 +1,19 @@
-const humburgerMenuInput = document.querySelector(".humburger-menu input");
+const humburger = document.querySelector(".humburger-menu");
+const icon = document.querySelector(".humburger-menu .fas");
 const slide = document.querySelector(".slide");
 const link = document.querySelectorAll(".slide li");
 const container = document.querySelector(".container");
 const closeIcon = document.querySelector(".closeIcon");
 const myAlert = document.querySelector(".myalert");
 
-humburgerMenuInput.addEventListener("click", function () {
-  slide.classList.toggle("slide-open");
-});
+function humburgerMenu() {
+  slide.classList.toggle("toggle");
+  icon.classList.toggle("fa-bars");
+  icon.classList.toggle("fa-times");
+}
 
-link.forEach(function (e) {
-  e.addEventListener("click", function () {
-    slide.classList.toggle("slide-open");
-    humburgerMenuInput.checked = false;
-  });
-});
+humburger.addEventListener("click", humburgerMenu);
 
-container.addEventListener("click", function () {
-  if (humburgerMenuInput.checked == true) {
-    slide.classList.toggle("slide-open");
-    humburgerMenuInput.checked = false;
-  }
-});
-
-closeIcon.addEventListener("click", function () {
+closeIcon.addEventListener("click", function() {
   myAlert.classList.toggle("none");
 });
