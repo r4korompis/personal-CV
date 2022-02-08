@@ -1,26 +1,44 @@
 /* Universal Sytle */
-body {
-  font-family: 'Poppins', sans-serif;
+:root {
+  --basic-color: #d600ff;
 }
 
-#about, #projects, #contact {
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+#projects, #contact {
   padding-top: 4em;
 }
 
 /* Navbar */
 .navbar {
-  background-color: #f017ff;
+  background-color: var(--basic-color);
 }
 
 .navbar-brand {
-  font-family: 'Pacifico', sans-serif;
-  letter-spacing: .1rem;
+  font-family: 'Lobster', cursive;
 }
 
 /* Jumbotron */
 .jumbotron {
   background-color: #fde6ff;
   padding-top: 5.5em;
+}
+
+/* tagline */
+.taglines {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+}
+
+.tagline {
+  text-align: center;
+  border: 1px solid var(--basic-color);
+  border-radius: 5px;
+  color: var(--basic-color);
+  margin-right: .625em;
+  padding: .3125em 0;
 }
 
 /* Projects */
@@ -31,4 +49,18 @@ body {
 /* Footer */
 footer {
   background-color: #f017ff;
+}
+
+/* Responsive Breakpoint */
+@media (max-width: 576px) {
+
+  /* jumbotron */
+  .display-4 {
+    text-align: center;
+  }
+
+  /* tagline */
+  .taglines {
+    justify-content: center;
+  }
 }
