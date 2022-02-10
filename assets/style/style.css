@@ -1,10 +1,14 @@
 /* Universal Sytle */
 :root {
   --basic-color: #d600ff;
+  --basic-dark-color: #37474F;
+  --bg-color: #E6E6E6;
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  color: var(--basic-dark-color);
+  background-color: var(--bg-color)
 }
 
 #projects, #contact {
@@ -16,43 +20,44 @@ body {
   background-color: var(--basic-color);
 }
 
-.navbar-brand {
-  font-family: 'Lobster', cursive;
+.bi {
+  margin: 0 .3125em;
 }
 
 /* Jumbotron */
 .jumbotron {
-  background-color: #fde6ff;
   padding-top: 5.5em;
+}
+
+h1.display-4 {
+  font-weight: 700;
 }
 
 /* tagline */
 .taglines {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
+  padding-top: .625em;
 }
 
 .tagline {
   text-align: center;
   border: 1px solid var(--basic-color);
-  border-radius: 5px;
+  border-radius: .625em;
   color: var(--basic-color);
   margin-right: .625em;
   padding: .3125em 0;
-}
-
-/* Projects */
-#projects {
-  background-color: #fde6ff;
+  font-size: .9375em;
+  font-weight: 500;
 }
 
 /* Footer */
 footer {
-  background-color: #f017ff;
+  background-color: var(--basic-color);
 }
 
 /* Responsive Breakpoint */
-@media (max-width: 576px) {
+@media (max-width: 768px) {
 
   /* jumbotron */
   .display-4 {
