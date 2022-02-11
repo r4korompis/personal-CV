@@ -15,6 +15,11 @@ body {
   padding-top: 4em;
 }
 
+.btn {
+  background: var(--basic-color);
+  color: white;
+}
+
 /* Navbar */
 .navbar {
   background-color: var(--basic-color);
