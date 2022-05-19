@@ -1,0 +1,162 @@
+/* Global style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Color */
+  --basic-color: #292a2d;
+  --basic-color-light: #c4c4c4;
+  --font-color: #a9a9b3;
+
+  /* Font family */
+  --basic-font: "Ubuntu Mono", monospace;
+  --monospace-font: "Courier New", Courier, monospace;
+}
+
+body {
+  background: var(--basic-color);
+  color: var(--font-color);
+  font-family: var(--basic-font);
+  font-weight: bold;
+}
+
+a:link,
+a:visited {
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+.container {
+  margin: 1.25em 1.875em;
+}
+
+/* Navigation */
+.nav-links,
+.nav-medsos {
+  list-style: none;
+  text-decoration: none;
+}
+
+.nav-link a,
+.medsos a {
+  font-size: 1.2rem;
+}
+
+.nav-link a:visited,
+.medsos a:visited {
+  color: var(--font-color);
+}
+
+.nav-link a:hover,
+.medsos a:hover {
+  opacity: 0.5;
+}
+
+.nav-medsos {
+  display: flex;
+}
+
+.nav-medsos .medsos {
+  background: var(--font-color);
+  padding: 0.3125em;
+  border-radius: 50%;
+}
+
+.nav-medsos .medsos a {
+  color: var(--basic-color);
+}
+
+/* Responsive Breakpoint */
+/* Mobile devices */
+@media screen and (max-width: 834px) {
+  /* Navigation */
+  .nav-box {
+    width: 50%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--basic-color-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+    z-index: -1;
+    transition: 0.5s;
+  }
+
+  .toggle {
+    transform: translateX(0);
+  }
+
+  .change-color {
+    color: var(--basic-color);
+  }
+
+  .nav-links {
+    text-align: center;
+  }
+
+  .nav-links .nav-link {
+    padding: 1.25em 0;
+  }
+
+  .nav-medsos {
+    padding-top: 1.25em;
+  }
+
+  .nav-medsos .medsos {
+    margin: 0 0.3125em;
+  }
+
+  .nav-links .nav-link a,
+  .nav-medsos .medsos a {
+    color: var(--basic-color);
+  }
+
+  .humburger-menu {
+    float: right;
+  }
+
+  .fas {
+    font-size: 2rem;
+  }
+}
+
+/* Desktop devices */
+@media screen and (min-width: 835px) {
+  .container {
+    margin: 1.25em 3.125em;
+  }
+
+  /* Navigation */
+  .nav-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .humburger-menu {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+  }
+
+  .nav-links .nav-link {
+    margin-right: 1.25em;
+  }
+
+  .nav-medsos .medsos {
+    margin-left: 0.625em;
+  }
+}
+
+/* Large desktop devices */
+@media screen and (min-width: 1240px) {
+}

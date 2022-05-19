@@ -5,6 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rangga Korompis</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/af8d4e2de2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="assets/style/style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- Container -->
+    <div class="container">
+      <!-- Navigation -->
+      <nav class="nav">
+        <div class="nav-box">
+          <ul class="nav-links">
+            <li class="nav-link"><a href="">Home</a></li>
+            <li class="nav-link"><a href="">Projects</a></li>
+            <li class="nav-link"><a href="">Contact</a></li>
+          </ul>
+          <ul class="nav-medsos">
+            <li class="medsos">
+              <a href=""><i class="fab fa-facebook"></i></a>
+            </li>
+            <li class="medsos">
+              <a href=""><i class="fab fa-instagram"></i></a>
+            </li>
+            <li class="medsos">
+              <a href=""><i class="fab fa-github"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="humburger-menu">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+
+      <!-- Header -->
+      <header class="header"></header>
+
+      <!-- Main -->
+      <main class="main">
+        <!-- Projects -->
+        <section class="projects"></section>
+
+        <!-- Contact -->
+        <section class="contact"></section>
+      </main>
+    </div>
+
+    <!-- Javascript -->
+    <script defer>
+      const humburger = document.querySelector(".fa-bars");
+      const nav = document.querySelector(".nav-box");
+      humburger.addEventListener("click", function () {
+        nav.classList.toggle("toggle");
+        humburger.classList.toggle("change-color");
+        humburger.classList.toggle("fa-times");
+      });
+    </script>
+  </body>
 </html>
