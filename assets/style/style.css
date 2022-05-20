@@ -8,6 +8,7 @@
 :root {
   /* Color */
   --basic-color: #292a2d;
+  --basic-color-semi-light: #424347;
   --basic-color-light: #c4c4c4;
   --font-color: #a9a9b3;
 
@@ -61,7 +62,11 @@ a:visited {
 
 .nav-medsos .medsos {
   background: var(--font-color);
-  padding: 0.3125em;
+  width: 1.875em;
+  height: 1.875em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
 }
 
@@ -69,8 +74,90 @@ a:visited {
   color: var(--basic-color);
 }
 
+/* Header */
+.header {
+  padding: 2.5em 0;
+  display: flex;
+}
+
+.bash-style {
+  padding-bottom: 2.5em;
+}
+
+.bash-style span {
+  font-size: 1.8em;
+}
+
+.bash-style .command {
+  font-size: 1em;
+  font-family: var(--monospace-font);
+}
+
+.taglines {
+  display: flex;
+  padding: 1.7em 0;
+}
+
+.tagline {
+  margin-right: 0.625em;
+  padding: 0.3125em;
+  border: 0.25em solid var(--basic-color-semi-light);
+}
+
+.desc {
+  padding-top: 1em;
+  max-width: 31.5625em;
+  line-height: 1.5;
+}
+
 /* Responsive Breakpoint */
 /* Mobile devices */
+@media screen and (max-width: 415px) {
+  /* Header */
+  .header-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 1.7em;
+    text-align: center;
+  }
+
+  .taglines {
+    justify-content: center;
+  }
+}
+
+/* Small tablet devices */
+@media screen and (min-width: 700px) {
+  /* Header */
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 13em;
+    height: 13em;
+    background: var(--font-color);
+    padding: 2em;
+    border-radius: 50%;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 699px) {
+  /* Header */
+  .header-right {
+    display: none;
+  }
+}
+
+/* Tablet devices */
 @media screen and (max-width: 834px) {
   /* Navigation */
   .nav-box {
@@ -85,7 +172,7 @@ a:visited {
     justify-content: center;
     align-items: center;
     transform: translateX(100%);
-    z-index: -1;
+    z-index: 1;
     transition: 0.5s;
   }
 
@@ -119,18 +206,21 @@ a:visited {
   }
 
   .humburger-menu {
-    float: right;
+    display: flex;
+    justify-content: end;
   }
 
   .fas {
     font-size: 2rem;
+    z-index: 2;
   }
+
+  /* Header */
 }
 
-/* Desktop devices */
 @media screen and (min-width: 835px) {
   .container {
-    margin: 1.25em 3.125em;
+    margin: 1.25em 4em;
   }
 
   /* Navigation */
@@ -158,5 +248,18 @@ a:visited {
 }
 
 /* Large desktop devices */
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 1024px) {
+  .container {
+    margin: 1.25em 10em;
+  }
+
+  /* Header */
+  .hero {
+    width: 15.5em;
+    height: 15.5em;
+  }
+
+  .header-right {
+    margin-left: 4em;
+  }
 }
