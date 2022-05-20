@@ -20,6 +20,9 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- Style -->
     <link rel="stylesheet" href="assets/style/style.css" />
   </head>
@@ -30,9 +33,9 @@
       <nav class="nav">
         <div class="nav-box">
           <ul class="nav-links">
-            <li class="nav-link"><a href="">Home</a></li>
-            <li class="nav-link"><a href="">Projects</a></li>
-            <li class="nav-link"><a href="">Contact</a></li>
+            <li class="nav-link"><a href="#home">Home</a></li>
+            <li class="nav-link"><a href="#projects">Projects</a></li>
+            <li class="nav-link"><a href="#contact">Contact</a></li>
           </ul>
           <ul class="nav-medsos">
             <li class="medsos">
@@ -60,27 +63,31 @@
       </nav>
 
       <!-- Header -->
-      <header class="header">
+      <header class="header" id="home">
         <div class="header-left">
           <div class="bash-style">
+            <div id="typed-strings">
+              <span>whoami</span>
+            </div>
             <span>┌────[rk@rk]─[/]</span>
             <br />
-            <span>└───╼ $ <span class="command">whoami</span></span>
+            <span>└───╼ $ <span class="command" id="typed"></span></span>
           </div>
-          <h1 class="title">Rangga Aldo Korompis</h1>
-          <div class="taglines">
-            <h3 class="tagline">Student</h3>
-            <h3 class="tagline">Web Developer</h3>
+          <div data-aos="fade-right" data-aos-delay="1100">
+            <h1 class="title">Rangga Aldo Korompis</h1>
+            <div class="taglines">
+              <h3 class="tagline">Student</h3>
+              <h3 class="tagline">Web Developer</h3>
+            </div>
+            <p class="desc">
+              I'm a student at Universitas Klabat. I specialise in Web
+              Development. I'm passionate about programming and I always
+              striving to grow and learn something new.
+            </p>
           </div>
-          <p class="desc">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-            at voluptatibus quisquam molestias deserunt sed dolorum id
-            consequatur natus expedita nulla, explicabo sit temporibus odio
-            iure. Veritatis necessitatibus culpa sequi?
-          </p>
         </div>
         <div class="header-right">
-          <div class="hero">
+          <div class="hero" data-aos="fade-left" data-aos-delay="1200">
             <img
               src="assets/images/hero-img.png"
               alt="hero image"
@@ -93,14 +100,99 @@
       <!-- Main -->
       <main class="main">
         <!-- Projects -->
-        <section class="projects"></section>
+        <section class="projects" id="projects">
+          <h2 class="subtitle">Projects</h2>
+          <div class="cards">
+            <div class="card" data-aos="flip-left">
+              <div class="card-img">
+                <a
+                  href="https://ranggakorompis.github.io/survey-form-joe-taslim/"
+                  target="_blank"
+                  ><img
+                    src="assets/images/project-img/project1.png"
+                    alt="Project 1"
+                  />
+                  <p class="card-title">Survey Form Joe Taslim</p></a
+                >
+              </div>
+            </div>
+            <div class="card" data-aos="flip-left" data-aos-delay="100">
+              <div class="card-img">
+                <a
+                  href="https://ranggakorompis.github.io/tribute-page-joe-taslim/"
+                  target="_blank"
+                  ><img
+                    src="assets/images/project-img/project2.png"
+                    alt="Project 2"
+                  />
+                  <p class="card-title">Tribute Page Joe Taslim</p></a
+                >
+              </div>
+            </div>
+            <div class="card" data-aos="flip-left" data-aos-delay="200">
+              <div class="card-img">
+                <a
+                  href="https://ranggakorompis.github.io/technical-documentation-page/"
+                  target="_blank"
+                  ><img
+                    src="assets/images/project-img/project3.png"
+                    alt="Project 3"
+                  />
+                  <p class="card-title">Technical Documentation</p></a
+                >
+              </div>
+            </div>
+            <div class="card" data-aos="flip-left" data-aos-delay="300">
+              <div class="card-img">
+                <a
+                  href="https://ranggakorompis.github.io/landing-page-brave-snax/"
+                  target="_blank"
+                  ><img
+                    src="assets/images/project-img/project4.png"
+                    alt="Project 4"
+                  />
+                  <p class="card-title">Landing Page Bravesnax</p></a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
 
         <!-- Contact -->
-        <section class="contact"></section>
+        <section class="contact" id="contact">
+          <h2 class="subtitle">Contact</h2>
+          <form action="" class="form" data-aos="fade-up">
+            <label for="name"> Name <br /> </label>
+            <input type="text" name="name" id="name" />
+            <label for="email"> Email <br /> </label>
+            <input type="email" name="email" id="email" />
+            <label for="massage"> Massage <br /> </label>
+            <textarea name="massage" id="massage" cols="30" rows="5"></textarea>
+            <input type="submit" value="Submit" id="submit" />
+          </form>
+        </section>
       </main>
     </div>
 
     <!-- Javascript -->
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
+
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      var typed = new Typed("#typed", {
+        stringsElement: "#typed-strings",
+        typeSpeed: 100,
+      });
+    </script>
+
+    <!-- My script -->
     <script defer>
       const humburger = document.querySelector(".fa-bars");
       const nav = document.querySelector(".nav-box");
@@ -108,6 +200,7 @@
         nav.classList.toggle("toggle");
         humburger.classList.toggle("change-color");
         humburger.classList.toggle("fa-times");
+        humburger.classList.toggle("fixed");
       });
     </script>
   </body>

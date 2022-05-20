@@ -34,6 +34,12 @@ a:visited {
   margin: 1.25em 1.875em;
 }
 
+.subtitle {
+  padding-top: 2.5em;
+  text-align: center;
+  padding-bottom: 1.5625em;
+}
+
 /* Navigation */
 .nav-links,
 .nav-medsos {
@@ -110,6 +116,65 @@ a:visited {
   line-height: 1.5;
 }
 
+/* Projects */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12.5em, 1fr));
+  gap: 0.9375em;
+}
+
+.card-img a img {
+  width: 100%;
+  height: auto;
+}
+
+.card-img {
+  background: var(--font-color);
+}
+
+.card-title {
+  color: var(--basic-color);
+  text-align: center;
+  padding: 0.625em;
+}
+
+/* Contact */
+.form {
+  max-width: 31.25em;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  font-size: 1.2em;
+  padding-top: 0.9375em;
+  padding-bottom: 0.625em;
+}
+
+#name,
+#email {
+  background: var(--font-color);
+  height: 2.5em;
+  border: none;
+}
+
+#massage {
+  background: var(--font-color);
+}
+
+#submit {
+  width: 5em;
+  background: var(--font-color);
+  border: none;
+  margin-top: 0.9375em;
+  padding: 0.625em;
+  cursor: pointer;
+  font-family: var(--basic-font);
+  font-weight: bold;
+  margin-bottom: 1.2em;
+}
+
 /* Responsive Breakpoint */
 /* Mobile devices */
 @media screen and (max-width: 415px) {
@@ -182,6 +247,10 @@ a:visited {
 
   .change-color {
     color: var(--basic-color);
+  }
+
+  .fixed {
+    position: fixed;
   }
 
   .nav-links {
