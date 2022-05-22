@@ -69,7 +69,7 @@
       <header class="header" id="home">
         <div class="header-left">
           <div class="bash-style">
-            <span>┌────[rk@rk]─[/]</span>
+            <span>┌────[rk@rk]─[~]</span>
             <br />
             <span>└───╼ $ <span class="command" id="typed"></span></span>
           </div>
@@ -161,7 +161,11 @@
         <!-- Contact -->
         <section class="contact" id="contact">
           <h2 class="subtitle">Contact</h2>
-          <form action="" class="form" data-aos="fade-up">
+          <form
+            onsubmit="sendEmail(); reset(); return false;"
+            class="form"
+            data-aos="fade-up"
+          >
             <label for="name"> Name <br /> </label>
             <input type="text" name="name" id="name" required />
             <label for="email"> Email <br /> </label>
@@ -174,11 +178,16 @@
               rows="5"
               required
             ></textarea>
-            <input type="submit" value="Submit" id="submit" />
+            <button type="submit" id="submit">Submit</button>
           </form>
         </section>
       </main>
     </div>
+
+    <!-- Button scroll top -->
+    <button id="btnScrollTop" title="Button scroll top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- Javascript -->
     <!-- AOS -->
@@ -198,15 +207,6 @@
     </script>
 
     <!-- My script -->
-    <script defer>
-      const humburger = document.querySelector(".fa-bars");
-      const nav = document.querySelector(".nav-box");
-      humburger.addEventListener("click", function () {
-        nav.classList.toggle("toggle");
-        humburger.classList.toggle("change-color");
-        humburger.classList.toggle("fa-times");
-        humburger.classList.toggle("fixed");
-      });
-    </script>
+    <script src="assets/script/script.js" defer></script>
   </body>
 </html>
