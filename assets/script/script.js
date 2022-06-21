@@ -1,12 +1,13 @@
 // Humburger menu
 const humburger = document.querySelector(".fa-bars");
 const nav = document.querySelector(".nav-box");
-humburger.addEventListener("click", function () {
+function humburgerMenu() {
   nav.classList.toggle("toggle");
   humburger.classList.toggle("change-color");
   humburger.classList.toggle("fa-times");
   humburger.classList.toggle("fixed");
-});
+}
+humburger.addEventListener("click", humburgerMenu);
 
 // Button scroll top
 const btnScrollTop = document.getElementById("btnScrollTop");
