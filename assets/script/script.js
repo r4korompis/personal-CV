@@ -21,7 +21,7 @@ const scrollFunction = () => {
     btnScrollTop.style.display = "none";
   }
 };
-btnScrollTop.addEventListener("click", () => {
+btnScrollTop.addEventListener("click", function () {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 });
