@@ -75,17 +75,12 @@ a:visited {
 }
 
 .nav-medsos .medsos {
-  /* background: var(--font-color); */
   width: 1.875em;
   height: 1.875em;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-}
-
-.nav-medsos .medsos a {
-  /* color: var(--basic-color); */
 }
 
 .nav-medsos .medsos a img {
