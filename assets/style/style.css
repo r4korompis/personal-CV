@@ -45,6 +45,10 @@ a:visited {
 }
 
 /* Navigation */
+.nav {
+  margin-bottom: 2.5em;
+}
+
 .nav-links,
 .nav-medsos {
   list-style: none;
@@ -71,7 +75,7 @@ a:visited {
 }
 
 .nav-medsos .medsos {
-  background: var(--font-color);
+  /* background: var(--font-color); */
   width: 1.875em;
   height: 1.875em;
   display: flex;
@@ -81,12 +85,15 @@ a:visited {
 }
 
 .nav-medsos .medsos a {
-  color: var(--basic-color);
+  /* color: var(--basic-color); */
+}
+
+.nav-medsos .medsos a img {
+  max-width: 100%;
 }
 
 /* Header */
 .header {
-  padding: 2.5em 0;
   display: flex;
 }
 
@@ -250,7 +257,7 @@ a:visited {
     top: 0;
     right: 0;
     bottom: 0;
-    background: var(--basic-color-light);
+    background: rgba(41, 42, 45, 0.7);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -288,22 +295,20 @@ a:visited {
     margin: 0 0.3125em;
   }
 
-  .nav-links .nav-link a,
-  .nav-medsos .medsos a {
-    color: var(--basic-color);
-  }
-
   .humburger-menu {
     display: flex;
     justify-content: end;
   }
 
-  .fas {
-    font-size: 2rem;
+  .humburger-menu span {
+    width: 3.125em;
+    height: 3.125em;
     z-index: 2;
   }
 
-  /* Header */
+  .humburger-menu span img {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 835px) {
