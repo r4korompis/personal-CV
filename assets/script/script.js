@@ -1,4 +1,3 @@
-// Humburger menu
 const humburger = document.querySelector(".humburger-menu span");
 const nav = document.querySelector(".nav-box");
 const humburgerMenu = () => {
@@ -7,7 +6,6 @@ const humburgerMenu = () => {
 };
 humburger.addEventListener("click", humburgerMenu);
 
-// Button scroll top
 const btnScrollTop = document.getElementById("btnScrollTop");
 window.onscroll = () => {
   scrollFunction();

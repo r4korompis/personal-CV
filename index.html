@@ -18,10 +18,11 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
     <!-- AOS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
 
     <!-- Style -->
     <link rel="stylesheet" href="assets/style/style.css" />
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
   </head>
   <body>
     <!-- Container -->
@@ -185,22 +186,22 @@
     </button>
 
     <!-- Javascript -->
-    <!-- My script -->
+    <!-- Main Script -->
     <script src="assets/script/script.js" defer></script>
-
-    <!-- AOS -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        once: true,
-      });
-    </script>
 
     <!-- Typed.js -->
     <script>
       var typed = new Typed("#typed", {
         strings: ["whoami"],
         typeSpeed: 100,
+      });
+    </script>
+
+    <!-- AOS -->
+    <script src="node_modules/aos/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
       });
     </script>
   </body>
