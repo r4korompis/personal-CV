@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rangga Korompis</title>
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,16 +17,13 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap"
       rel="stylesheet"
     />
-
+    
     <!-- Typed.js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
     <!-- AOS -->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <!-- Style -->
-    <link rel="stylesheet" href="assets/style/style.css" />
-    <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
   </head>
   <body>
     <!-- Container -->
@@ -56,7 +57,12 @@
           </ul>
         </div>
         <div class="humburger-menu">
-          <span><img src="assets/icons/menu-icon.svg" alt="menu icon" /></span>
+          <span
+            ><img
+              id="close-icon"
+              src="assets/icons/menu-icon.svg"
+              alt="menu icon"
+          /></span>
         </div>
       </nav>
 
@@ -191,18 +197,19 @@
 
     <!-- Typed.js -->
     <script>
-      var typed = new Typed("#typed", {
+      let typed = new Typed("#typed", {
         strings: ["whoami"],
         typeSpeed: 100,
       });
     </script>
 
     <!-- AOS -->
-    <script src="node_modules/aos/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({
         once: true,
       });
+    </script>
     </script>
   </body>
 </html>
