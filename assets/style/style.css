@@ -181,21 +181,6 @@ a:visited {
   margin-bottom: 1.2em;
 }
 
-/* Button scroll top */
-#btnScrollTop {
-  display: none;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: var(--font-color);
-  border: none;
-  cursor: pointer;
-}
-
-#btnScrollTop .fa-arrow-up {
-  color: #202124;
-}
-
 /* Responsive Breakpoint */
 /* Mobile devices */
 @media screen and (max-width: 415px) {
@@ -332,11 +317,6 @@ a:visited {
 
   .nav-medsos .medsos {
     margin-left: 0.625em;
-  }
-
-  /* Button scroll top */
-  #btnScrollTop .fa-arrow-up {
-    font-size: 2rem;
   }
 }
 
